@@ -1,1 +1,270 @@
-# myaim.github.io
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>জীৎ বড়াল-এর ব্যক্তিগত ড্যাশবোর্ড</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Hind Siliguri', 'Inter', sans-serif;
+            background-color: #111827;
+            color: #E5E7EB;
+        }
+        .card {
+            background-color: #1F2937;
+            border: 1px solid #374151;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .countdown-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: #374151;
+            border-radius: 0.75rem;
+            padding: 1rem;
+            min-width: 80px;
+        }
+        .countdown-number {
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: #F9FAFB;
+        }
+        .countdown-label {
+            font-size: 0.875rem;
+            color: #9CA3AF;
+            margin-top: 0.25rem;
+        }
+        .goal-item {
+            background: #374151;
+            padding: 0.75rem 1rem;
+            border-radius: 0.75rem;
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div id="app" class="container mx-auto p-4 md:p-8 max-w-7xl">
+        <!-- Header -->
+        <header class="text-center mb-10">
+            <h1 class="text-4xl md:text-5xl font-bold text-white">জীৎ বড়াল-এর মিশন কন্ট্রোল</h1>
+            <p class="text-lg text-gray-400 mt-2">"কঠোর পরিশ্রমই সৌভাগ্যের চাবিকাঠি।"</p>
+        </header>
+
+        <main class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Left Column: Countdown & Goals -->
+            <div class="lg:col-span-2 space-y-8">
+                <!-- Countdown Timer -->
+                <div class="card">
+                    <h2 class="text-2xl font-bold text-white mb-4">লক্ষ্যের পথে কাউন্টডাউন</h2>
+                    <div class="p-4 bg-gray-900/50 rounded-lg">
+                        <h3 class="text-xl font-semibold text-center text-gray-300 mb-4">HSC পরীক্ষা ২০২৭</h3>
+                        <div id="countdown" class="flex justify-center items-center space-x-2 md:space-x-4">
+                            <!-- Countdown items will be injected here by JS -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Goals -->
+                <div class="card">
+                    <h2 class="text-2xl font-bold text-white mb-4">আমার প্রধান লক্ষ্যসমূহ</h2>
+                    <ul class="space-y-3">
+                        <li class="goal-item">
+                            <svg class="w-6 h-6 text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <span>HSC পরীক্ষায় প্রতিটি বিষয়ে ৯৫+ নম্বর অর্জন।</span>
+                        </li>
+                        <li class="goal-item">
+                            <svg class="w-6 h-6 text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <span>সেরা প্রতিষ্ঠানে ভর্তি: ঢামেক, বুয়েট, ঢাবি।</span>
+                        </li>
+                        <li class="goal-item">
+                            <svg class="w-6 h-6 text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <span>বিশ্বসেরা বিশ্ববিদ্যালয়ে সম্পূর্ণ অর্থায়নে স্কলারশিপ।</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Right Column: Tools & Notes -->
+            <div class="space-y-8">
+                <!-- Clock -->
+                <div class="card">
+                    <h2 class="text-2xl font-bold text-white mb-4">দ্রুত সরঞ্জাম</h2>
+                    <div class="p-4 bg-gray-900/50 rounded-lg text-center">
+                        <p class="text-gray-400 text-sm">বর্তমান সময়</p>
+                        <div id="clock" class="text-4xl font-bold text-white tracking-wider"></div>
+                    </div>
+                </div>
+
+                <!-- Personal Notes -->
+                <div class="card h-full flex flex-col">
+                    <div class="flex justify-between items-center mb-4">
+                         <h2 class="text-2xl font-bold text-white">ব্যক্তিগত নোট</h2>
+                         <p id="saveStatus" class="text-sm text-gray-500 transition-opacity duration-300"></p>
+                    </div>
+                    <textarea id="notes" class="flex-grow w-full p-3 bg-gray-800 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 text-gray-200" placeholder="আপনার চিন্তা, ধারণা বা আজকের কাজগুলো এখানে লিখুন..."></textarea>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script type="module">
+        // Firebase Imports
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInAnonymously, signInWithCustomToken, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore, doc, setDoc, onSnapshot, setLogLevel } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+        // --- Global Variables & Config ---
+        const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
+        const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {};
+        const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
+        
+        let db, auth, userId, notesDocRef;
+        let noteSaveTimeout;
+
+        // --- UI Elements ---
+        const countdownEl = document.getElementById('countdown');
+        const clockEl = document.getElementById('clock');
+        const notesEl = document.getElementById('notes');
+        const saveStatusEl = document.getElementById('saveStatus');
+
+        // --- Countdown Timer ---
+        function startCountdown() {
+            const hscExamDate = new Date('April 1, 2027 09:00:00').getTime();
+
+            setInterval(() => {
+                const now = new Date().getTime();
+                const distance = hscExamDate - now;
+
+                if (distance < 0) {
+                    countdownEl.innerHTML = `<div class="text-2xl font-bold text-green-400">পরীক্ষা সম্পন্ন!</div>`;
+                    return;
+                }
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                countdownEl.innerHTML = `
+                    <div class="countdown-item"><span class="countdown-number">${days}</span><span class="countdown-label">দিন</span></div>
+                    <div class="countdown-item"><span class="countdown-number">${hours}</span><span class="countdown-label">ঘন্টা</span></div>
+                    <div class="countdown-item"><span class="countdown-number">${minutes}</span><span class="countdown-label">মিনিট</span></div>
+                    <div class="countdown-item"><span class="countdown-number">${seconds}</span><span class="countdown-label">সেকেন্ড</span></div>
+                `;
+            }, 1000);
+        }
+
+        // --- Digital Clock ---
+        function startClock() {
+            setInterval(() => {
+                const now = new Date();
+                const timeString = now.toLocaleTimeString('bn-BD', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true });
+                clockEl.textContent = timeString;
+            }, 1000);
+        }
+
+        // --- Note Saving Logic ---
+        function showSaveStatus(message, duration = 2000) {
+            saveStatusEl.textContent = message;
+            saveStatusEl.style.opacity = '1';
+            setTimeout(() => {
+                 saveStatusEl.style.opacity = '0';
+            }, duration);
+        }
+
+        async function saveNote() {
+            if (!notesDocRef) return;
+            showSaveStatus('সংরক্ষণ করা হচ্ছে...');
+            try {
+                await setDoc(notesDocRef, { content: notesEl.value }, { merge: true });
+                showSaveStatus('সংরক্ষিত');
+            } catch (error) {
+                console.error("Error saving note: ", error);
+                showSaveStatus('সংরক্ষণে ত্রুটি');
+            }
+        }
+        
+        function handleNoteInput() {
+            clearTimeout(noteSaveTimeout);
+            noteSaveTimeout = setTimeout(saveNote, 1000); // Debounce saving by 1 second
+        }
+
+        // --- Firebase Initialization and Auth ---
+        async function initializeFirebase() {
+             if (Object.keys(firebaseConfig).length === 0) {
+                console.warn("Firebase config is not available.");
+                notesEl.disabled = true;
+                notesEl.placeholder = "নোট সংরক্ষণের জন্য Firebase কনফিগারেশন প্রয়োজন।";
+                return;
+            }
+            try {
+                const app = initializeApp(firebaseConfig);
+                db = getFirestore(app);
+                auth = getAuth(app);
+                setLogLevel('debug');
+
+                onAuthStateChanged(auth, user => {
+                    if (user) {
+                        userId = user.uid;
+                        console.log("Authenticated user:", userId);
+                        notesDocRef = doc(db, `artifacts/${appId}/users/${userId}/personal_notes/dashboard_note`);
+                        
+                        // Setup listener for notes
+                        onSnapshot(notesDocRef, (doc) => {
+                            if (doc.exists()) {
+                                const currentNote = doc.data().content;
+                                if (notesEl.value !== currentNote) {
+                                    notesEl.value = currentNote;
+                                }
+                            } else {
+                                console.log("No note document found. A new one will be created on first input.");
+                            }
+                        }, (error) => {
+                            console.error("Error with note listener:", error);
+                        });
+                        
+                        notesEl.addEventListener('input', handleNoteInput);
+
+                    } else {
+                        console.log("User is not authenticated.");
+                    }
+                });
+                
+                if (initialAuthToken) {
+                    await signInWithCustomToken(auth, initialAuthToken);
+                } else {
+                    await signInAnonymously(auth);
+                }
+
+            } catch (error) {
+                console.error("Firebase Initialization Error:", error);
+                 notesEl.disabled = true;
+                 notesEl.placeholder = "Firebase সংযোগে ত্রুটি হয়েছে।";
+            }
+        }
+        
+        // --- App Entry Point ---
+        function main() {
+            startCountdown();
+            startClock();
+            initializeFirebase();
+        }
+
+        main();
+    </script>
+</body>
+</html>
+
